@@ -139,7 +139,7 @@ textarea {
 .ba-menu li {
 	list-style:none;
 	text-align: left;
-	padding:0 10px;
+	padding:0;
 	margin: 10px 0;
 	position:relative;
 }
@@ -152,23 +152,23 @@ textarea {
 
 .ba-menu_submenu-1,
 .ba-menu_submenu-2 {
-	background: #7f7e93;
 	position:absolute;
-	padding:0;
+	padding: 0;
 	min-width: 200px;
-    display:none;
+    visibility: hidden;
+    transition: all .5s;
 }
 
 
 
 .ba-menu>li:hover
 .ba-menu_submenu-1 {
-	display:block;
+	visibility: visible;
 
 }
 
-.ba-menu_submenu-1>li:hover .ba-menu_submenu-2 {
-	display:block;
+.ba-menu_option:hover .ba-menu_submenu-2 {
+	visibility: visible;
 	line-height:48px;
 }
 
@@ -187,6 +187,7 @@ textarea {
 	margin: 0;
 	padding: 0;
     border-bottom: 1px solid rgba(223, 222, 228, 0.15);
+    background: #7f7e93;
 }
 
 .ba-menu_submenu-1>li:hover,
@@ -201,7 +202,8 @@ textarea {
 
 .ba-menu_submenu-1 {
     left:-20px;
-	top: 35px;
+	top: 100%;
+	padding-top:30px;
 }
 
 .ba-menu_submenu-2 {
@@ -209,7 +211,7 @@ textarea {
 	left: 100%;
 }
 
-.ba-menu_submenu-1:after  {
+.ba-menu_pointer:after  {
 	bottom: 100%;
 	left: 50%;
 	border: solid transparent;
@@ -230,6 +232,7 @@ textarea {
 .ba-menu>li:hover {
 	background-color: #767588;
 }
+
 
 /*section class="ba-banner"*/
 
@@ -291,6 +294,7 @@ textarea {
 	background: #f06862;
 	color: #fbd9d7;
 	position:relative;
+	 overflow:hidden;
 }
 
 
